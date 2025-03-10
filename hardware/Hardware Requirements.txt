@@ -1,0 +1,24 @@
+1. Holographic Display/Projector
+   a. Holographic Fan Display
+   b. Looking Glass Display
+2. Microcontroller
+   a. Raspberry Pi (4 Model B or 3 Model B+)
+3. Camera Module
+   a. Raspberry Pi Camera Module V2
+   b. USB Camera (optional)
+4. Power Supply
+   a. 5V power supply for Raspberry Pi (at least 2.5A for Raspberry Pi 4)
+   b. Appropriate power supply for the holographic display
+5. Connectivity Module (Optional)
+   a. Wi-Fi Module
+   b. Bluetooth Module
+6. Enclosure
+   a. Box
+7. Wires and Connectors
+   a. Jumper wires
+   b. Breadboard
+   c. Connectors
+8. Optional Components
+   a. Micro SD Card (at least 16GB)
+   b. Heat Sink/Fan
+   c. HDMI Cable
