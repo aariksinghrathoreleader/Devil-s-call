@@ -1,22 +1,46 @@
+import threading
 import time
-import picamera
-from gesture_recognition import main as gesture_main
-from image_processing import process_image, display_image
+import cv2
+from gesture_recognition import GestureRecognition
+from image_processing import ImageProcessor
 
-# Function to capture an image
-def capture_image():
-    with picamera.PiCamera() as camera:
-        camera.resolution = (640, 480)
-        camera.start_preview()
-        time.sleep(2)  # Allow camera to adjust
-        camera.capture('image.jpg')
-        camera.stop_preview()
+class HologramSystem:
+    def __init__(self):
+        self.gesture_recognizer = GestureRecognition()
+        self.image_processor = ImageProcessor()
+        self.running = True
 
-# Main function
+    def start_gesture_tracking(self):
+        cap = cv2.VideoCapture(0)
+        while self.running:
+            ret, frame = cap.read()
+            if not ret:
+                continue
+
+            gesture = self.gesture_recognizer.detect_gesture(frame)
+            if gesture:
+                print(f"Detected Gesture: {gesture}")
+
+            cv2.imshow("Gesture Tracking", frame)
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                self.running = False
+
+        cap.release()
+        cv2.destroyAllWindows()
+
+    def process_hologram_image(self, image_path):
+        sharpened, edges = self.image_processor.process_image(image_path)
+        self.image_processor.save_processed_images(sharpened, edges, "hologram_output")
+
+    def run(self):
+        gesture_thread = threading.Thread(target=self.start_gesture_tracking)
+        gesture_thread.start()
+
+        while self.running:
+            time.sleep(1)
+
+        gesture_thread.join()
+
 if __name__ == "__main__":
-    capture_image()  # Capture an image
-    process_image('image.jpg')  # Process the captured image
-    display_image('processed_image.jpg')  # Display the processed image
-    
-    # Start gesture recognition
-    gesture_main()  # Start gesture recognition
+    system = HologramSystem()
+    system.run()
