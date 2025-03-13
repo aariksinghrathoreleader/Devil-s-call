@@ -1,0 +1,37 @@
+1. Rotation (X, Y Axis) – Rotate Object  
+   a. Gesture: Move one hand left or right to rotate horizontally, up or down to rotate vertically  
+   b. Effect:  
+      - Leftward swipe → Rotates hologram counterclockwise
+      - Rightward swipe → Rotates hologram clockwise  
+      - Upward swipe → Rotates upward (tilts back)  
+      - Downward swipe → Rotates downward (tilts forward)  
+2. Scaling (Zoom In/Out) – Change Object Size  
+   a. Gesture: Move both hands closer together to zoom out, spread apart to zoom in  
+   b. Effect:  
+      - Hands moving apart → Increases size of the hologram  
+      - Hands moving closer → Decreases size of the hologram  
+3. Translation (Moving Object in Space) – Move Object 
+   a. Gesture: Move an open hand in a direction  
+   b. Effect:  
+      - Move left → Moves object left
+      - Move right → Moves object right
+      - Move up → Moves object up
+      - Move down → Moves object down
+      - Move forward (towards the camera) → Moves object closer to the user
+      - Move backward (away from the camera) → Moves object farther from the user
+4. Object Selection / Change
+   a. Gesture: Swipe left or righ with one hand  
+   b. Effect: Switches between different 3D objects in the scene  
+      Example: Swiping to switch between a cube, sphere, or pyramid  
+5. Toggle Display (On/Off)  
+   a. Gesture: Raise an open palm facing the camera  
+   b. Effect:  
+      - If display is off, turns it on  
+      - If display is on, turns it off  
+6. Confirm Selection / Activate Action  
+  a. Gesture: Point one finger and push forward  
+  b. Effect: Selects an object or confirms an action  
+7. Reset Object to Default Position  
+   a. Gesture: Double-tap fingers in mid-air  
+   b. Effect: Resets object to its original position and size  
+        Example: If an object is moved too far, this gesture brings it back to the center  
