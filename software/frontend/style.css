@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: black;
+    color: white;
+    overflow: hidden;
+}
+
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #0d0d0d, #000000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeOut 3s forwards 4s;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+}
+
+#logo {
+    font-size: 50px;
+    font-weight: bold;
+    color: cyan;
+    text-shadow: 0 0 20px cyan, 0 0 40px blue;
+    animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+    animation: fadeIn 5s forwards 5s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+header {
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(90deg, #1a1a1a, #3a3a3a);
+    text-align: center;
+    position: relative;
+    border-bottom: 2px solid cyan;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px cyan;
+}
+
+#devils-call {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: red;
+    font-size: 24px;
+}
+
+#upload-container {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+}
+
+#upload-container input, #upload-container button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: cyan;
+    border: 1px solid cyan;
+    transition: background 0.3s;
+}
+
+#upload-container button:hover {
+    background: cyan;
+    color: black;
+}
+
+#pointsDisplay {
+    margin: 10px;
+    font-size: 1.5em;
+    text-shadow: 0 0 10px cyan;
+}
+
+#hologram-container {
+    width: 100%;
+    height: 400px;
+}
+
+#tile-container {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
