@@ -87,6 +87,10 @@ def apply_texture(mesh, image):
     return mesh
 
 if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Usage: python image_processing.py <image_path>")
+        sys.exit(1)
+
     image_path = sys.argv[1]
     model_url = reconstruct_3D(image_path)
 
