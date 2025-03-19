@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Hologram Viewer</title>
+    <title>SPECTRAcall</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://threejs.org/examples/js/loaders/PLYLoader.js"></script>
@@ -11,29 +11,35 @@
 <body>
     <!-- Splash Screen -->
     <div id="splash-screen">
-        <h1 id="logo">⚡ Devil's Call ⚡</h1>
+        <h1 id="logo">SPECTRAcall</h1>
     </div>
 
     <!-- Main Application -->
     <div id="app" style="display: none;">
         <header>
-            <h1>🔹 3D Hologram Viewer 🔹</h1>
+            <h1>💠SPECTRAcall💠</h1>
             <div id="devils-call">😈 Devil's Call</div>
         </header>
 
-        <!-- Upload Section -->
-        <div id="upload-container">
-            <input type="file" id="file-input" accept="image/*">
-            <button id="upload-button">Upload</button>
-            <button id="create-magic-button">Create Magic</button>
+        <div id="main-content">
+            <!-- Upload Section -->
+            <div id="upload-container">
+                <input type="file" id="file-input" accept="image/*">
+                <button id="upload-button">Upload</button>
+                <button id="create-magic-button">Create Magic</button>
+            </div>
+            <!-- Quotes Section -->
+            <div id="quotes-container">
+                <blockquote class="quote">🚀"The future isn’t flat—it’s holographic." 🚀</blockquote>
+                <blockquote class="quote">"Holograms: where science meets magic." </blockquote>
+                <blockquote class="quote">🌟"We used to dream of holograms; now, we create them." 🌟</blockquote>
+            </div>
+
+            <!-- Scrolling Facts Section -->
+            <div id="scrolling-facts">
+                <p class="fact slow">Studies show that 3D holographic learning can improve retention rates by up to 30% compared to traditional learning methods.</p>
+            </div>
         </div>
-
-        <!-- Display Points -->
-        <div id="pointsDisplay">✨ Points: 0 ✨</div>
-
-        <!-- Hologram & Tiles Containers -->
-        <div id="hologram-container"></div>
-        <div id="tile-container"></div>
     </div>
 
     <!-- Load JavaScript -->
