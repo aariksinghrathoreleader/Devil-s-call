@@ -1,8 +1,0 @@
-Software Requirements
-
-1. Operating System: Raspberry Pi OS or any compatible Linux distribution.
-2. Python 3.x: Installed and configured.
-3. Python Libraries: OpenCV, MediaPipe, Open3D, PyTorch.
-4. MiDaS Model: Downloaded and set up.
-5. Camera Drivers: Properly configured for Raspberry Pi Camera or USB camera.
-6. Development Environment: Text editor or IDE of your choice.
